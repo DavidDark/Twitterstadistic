@@ -32,4 +32,4 @@ La idea es que con ellos podamos hacer una estadística que se muestre en un htm
 (De ahí el nombre "Twitterstadistic")
 
 # Mucha suerte chicos, cualquier cosa, nos contactamos por el grupo de Messenger.
-# Pd. No olviden que
+ Pd. No olviden darle una checada a tutoriales, para que se den una idea de como funciona el API.
