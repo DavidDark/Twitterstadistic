@@ -1,8 +1,8 @@
-## Twitterstadistic
+# Twitterstadistic
 
 Este es el repo para el proyecto final de la Clase de Calidad y Pruebas de Software del 2018.
 
-# Requisitos:
+## Requisitos:
 
 Primeramente empiecen por descargar las siguientes herramientas
 (de lo contrario van a tener chorro de problemas):
@@ -14,7 +14,7 @@ Primeramente empiecen por descargar las siguientes herramientas
         * pip por consecuente al querer instalar PYPL 
           (Si...es un desmadre. Pero creeme cuando te digo que ésto funciona chingón.)
 
-# Situación:
+## Situación:
 
 Hasta ahora tenemos construidas:
     * La clase abstracta del API (cortesía de Morado)
@@ -24,12 +24,12 @@ Hasta ahora tenemos construidas:
     * Falta la clase de implementación.
     * Falta la clase main.
 
-# Implementación:
+## Implementación:
 
 La implementación va ligada directamente a la "clase implementación", en ésta mostraremos el resultado de los 
 datos obtenidos por el API y que están almacenados en la base de datos.
 La idea es que con ellos podamos hacer una estadística que se muestre en un html muy bonito.
 (De ahí el nombre "Twitterstadistic")
 
-# Mucha suerte chicos, cualquier cosa, nos contactamos por el grupo de Messenger.
+## Mucha suerte chicos, cualquier cosa, nos contactamos por el grupo de Messenger.
  Pd. No olviden darle una checada a tutoriales, para que se den una idea de como funciona el API.
