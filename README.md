@@ -5,7 +5,7 @@ Este es el repo para el proyecto final de la Clase de Calidad y Pruebas de Softw
 ## Requisitos:
 
 * Primeramente empiecen por descargar las siguientes herramientas
-(de lo contrario van a tener chorro de problemas):
+*  (de lo contrario van a tener chorro de problemas):
         - SQLite3 para el handler de la base de datos.
         - DB Browser for SQLite, para checar los datos dentro de la base y aplicar querys de prueba.
         - Python 3.6 (Ojo, debe ser de esta version en adelante, forzosamente.)
