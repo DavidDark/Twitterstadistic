@@ -4,7 +4,7 @@ Este es el repo para el proyecto final de la Clase de Calidad y Pruebas de Softw
 
 ## Requisitos:
 
-Primeramente empiecen por descargar las siguientes herramientas
+* Primeramente empiecen por descargar las siguientes herramientas
 (de lo contrario van a tener chorro de problemas):
         - SQLite3 para el handler de la base de datos.
         - DB Browser for SQLite, para checar los datos dentro de la base y aplicar querys de prueba.
@@ -16,7 +16,7 @@ Primeramente empiecen por descargar las siguientes herramientas
 
 ## Situación:
 
-Hasta ahora tenemos construidas:
+* Hasta ahora tenemos construidas:
     - La clase abstracta del API (cortesía de Morado)
     - La clase abstracta de la base (en proceso por cortesía de Morado)
     - Clase Base de Prueba del proyecto, de ésta nos basaremos para aplicar los requerimientos (Esta es cortesía mía)
@@ -26,10 +26,10 @@ Hasta ahora tenemos construidas:
 
 ## Implementación:
 
-La implementación va ligada directamente a la "clase implementación", en ésta mostraremos el resultado de los
+* La implementación va ligada directamente a la "clase implementación", en ésta mostraremos el resultado de los
 datos obtenidos por el API y que están almacenados en la base de datos.
 La idea es que con ellos podamos hacer una estadística que se muestre en un html muy bonito.
 (De ahí el nombre "Twitterstadistic")
 
 ## Mucha suerte chicos, cualquier cosa, nos contactamos por el grupo de Messenger.
- Pd. No olviden darle una checada a tutoriales, para que se den una idea de como funciona el API.
+ * Pd. No olviden darle una checada a tutoriales, para que se den una idea de como funciona el API.
