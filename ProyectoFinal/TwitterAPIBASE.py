@@ -1,7 +1,6 @@
 import tweepy
 import sqlite3
 import os
-from datetime import datetime
 from tweepy import OAuthHandler
 #Datos para Autentificación
 consumer_key = 'j7bXwQAiFE0EIcCrptRIbANGP'
@@ -14,23 +13,12 @@ auth.set_access_token(access_token,access_token_secret)
 #Autentificación
 api = tweepy.API(auth)
 handles_list = ['DavidDarkXD','Armando31647954']
-#ID en twitter, Nombre
-#De donde es
-#Verifidado o no
-#Cuantos seguidores Tiene
-#Cuantos tweets y retwitts ha hecho
-#Cuantos personas sigue
-#Tweets de los ultimos 15 días
-#Lenguaje de su interface
-#profile_image_url foto
-#withheld_scope usado o no por un usuario
-
 
 #Creacion de la tabla
-def insert_db(handle,followers,description,tweets):
+def insert_db(user_id,handle,lugar,verificado,followers,numtweets,friends,description,lenguaje,profile):
     conn = sqlite3.connect("social_data.db")
     cur = conn.cursor()
-    cur.execute(''' INSERT INTO tabla VALUES (?,?,?,?,?)''', (datetime.now(), handle, followers, description, tweets))
+    cur.execute(''' INSERT INTO tabla VALUES (?,?,?,?,?,?,?,?,?,?)''', (user_id,handle,lugar,verificado,followers,numtweets,friends,description,lenguaje,profile))
     conn.commit()
     conn.close()
 #Si no existe la base de datos, entonces se Crea
@@ -43,8 +31,9 @@ else:
 #Si la tabla no existe en la base, entonces la crea
 conn = sqlite3.connect("social_data.db")
 cur = conn.cursor()
+cur.executescript('drop table if exists tabla;')
 cur.execute('''CREATE TABLE IF NOT EXISTS tabla
-    (FetchDate Date, Handle Text, Followers Integer, Description Text, Tweets Text)
+    (ID Text, Nombre Text, Lugar Text, Verificado Text, Followers Integer, Tweets y Retweets Integer, Following Integer, Descipcion Text, Lenguaje Text, Foto Text)
     ''')
 conn.commit()
 conn.close()
@@ -53,25 +42,27 @@ for handle in handles_list:
     print ('Fetching %' + handle)
     try:
         user = api.get_user(screen_name=handle)
-        #Ejemplos de lo que podemos obtener:
-        #print ("Name:", user.name)
-        #print ("Name:", user.screen_name)
-        #print ("Number of tweets: " + str(user.statuses_count))
-        #print ("followers_count: " + str(user.followers_count))
-        #print ("Account location: ", user.location)
-        #print ("Account created at: ", user.created_at)
-        #print ("Account geo enabled: ", user.geo_enabled)
-        tweets=str(user.statuses_count)
+        user_id = user.id_str
+        lugar = user.location
+
+        if (user.verified == True):
+            verificado = 'Si.'
+        else:
+            verificado = 'Usuario no verificado.'
+
         followers = user.followers_count
-        description = user.description
+        numtweets= user.statuses_count
+        friends = user.friends_count
 
+        if (user.description == ''):
+            description = 'No tiene.'
+        else:
+            description = user.description
 
-        #for friend in user.friends():
-            #print (friend.screen_name)
-        insert_db(handle,followers,description,tweets)
+        lenguaje = user.lang
+        profile = user.profile_image_url
+
+        insert_db(user_id,handle,lugar,verificado,followers,numtweets,friends,description,lenguaje,profile)
         #Se comprueba si el usuario existe
     except tweepy.error.TweepError:
         print ('-- ' + handle + ' not found')
-
-#for tweet in public_tweets:
-#    print (tweet.text)
