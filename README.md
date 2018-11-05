@@ -12,7 +12,7 @@ Este es el repo para el proyecto final de la Clase de Calidad y Pruebas de Softw
         - tweepy, que es la librería que vamos a usar para los metodos del api de twitter.
         - PyPl para poder instalar la librería de tweepy.
         - pip por consecuente al querer instalar PYPL
-          (Si...es un desmadre. Pero creeme cuando te digo que ésto funciona chingón.)
+          (Si...es un des$%&#. Pero creeme cuando te digo que ésto funciona.)
 
 ## Situación:
 
@@ -21,14 +21,17 @@ Este es el repo para el proyecto final de la Clase de Calidad y Pruebas de Softw
     - La clase abstracta de la base (en proceso por cortesía de Morado)
     - Clase Base de Prueba del proyecto, de ésta nos basaremos para aplicar los requerimientos (Esta es cortesía mía)
     - Las clases concretas del API y la Base de Datos (Las puedes obtener separado la clase de prueba del proyecto)
-    - Falta la clase de implementación.
     - Falta la clase main.
+    ACTUALIZACIÓN:
+    - Tenemos la clase del objeto "Usuarios.py" que vamos a estar manejando con sus respectivos métodos.
+    - Sigue faltando la clase main, pero más tarde subo una clase para probar los métodos de usuario.
+      Que nos serviría para la clase implementación.
 
 ## Implementación:
 
 * La implementación va ligada directamente a la "clase implementación", en ésta mostraremos el resultado de los
 datos obtenidos por el API y que están almacenados en la base de datos.
-La idea es que con ellos podamos hacer una estadística que se muestre en un html muy bonito.
+La idea es que con ellos podamos hacer una estadística que se muestre en una interfaz muy bonita.
 (De ahí el nombre "Twitterstadistic")
 
 ## Mucha suerte chicos, cualquier cosa, nos contactamos por el grupo de Messenger.
