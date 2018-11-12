@@ -1,7 +1,7 @@
 import tweepy
 from tweepy import OAuthHandler
 
-def Autentificacion(self,usuario):
+def Autentificacion():
     #Datos para Autentificación
     consumer_key = 'j7bXwQAiFE0EIcCrptRIbANGP'
     consumer_secret = 'WX41oCT4SOK12vZEQYPqM1KHw2sukIknTjWaleX8BvVahi7ull'
@@ -12,4 +12,4 @@ def Autentificacion(self,usuario):
 
     #Autentificación
     api = tweepy.API(auth)
-    handles_list = [usuario]
+    return api

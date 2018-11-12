@@ -6,7 +6,7 @@ class BDS(AbstractObject):
     def insert_db(user_id,handle,lugar,verificado,followers,numtweets,friends,description,lenguaje,profile,Ranking=None,Categoria=None,Victorias=0,Derrotas=0):
         conn = sqlite3.connect("social_data.db")
         cur = conn.cursor()
-        if not os.path.exist("social_data.db"):
+        if not os.path.isfile("social_data.db"):
             conn = sqlite3.connect("social_data.db")
         else:
             pass
