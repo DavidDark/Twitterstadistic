@@ -19,6 +19,5 @@ Este es el repo para el proyecto final de la Clase de Calidad y Pruebas de Softw
 * Hasta ahora funciona como debería y ya no es necesaria la interfaz.
   - Solo falta volverlo abstracto ste pdo.
 
-
 ## Mucha suerte chicos, cualquier cosa, nos contactamos por el grupo de Messenger.
  * Pd. No olviden darle una checada a tutoriales, para que se den una idea de como funciona el API.
